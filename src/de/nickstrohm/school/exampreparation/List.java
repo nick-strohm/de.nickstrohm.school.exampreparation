@@ -13,6 +13,10 @@ public class List<T> {
     }
 
     public void next() {
+        if (!this.hasAccess()) {
+            return;
+        }
+
         this.cursor = this.cursor.getNext();
     }
 
